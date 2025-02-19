@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: lime;
+        }
+        button{
+            height: 40px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <button>Bas</button>
+    <div></div>
+    <script>
+        const bas = document.querySelector('button')
+        const div = document.querySelector('div')
+
+        document.addEventListener('touchstart', e => {
+            console.log(e.touches);
+            
+            div.style.backgroundColor = 'blue'
+        })
+        document.addEventListener('touchmove', e => {
+            console.log('Move');
+            div.style.backgroundColor = 'yellow'
+        })
+        document.addEventListener('touchend', e => {
+            div.style.backgroundColor = 'red'
+        })
+    </script>
+</body>
+</html>
