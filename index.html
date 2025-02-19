@@ -24,16 +24,16 @@
         const bas = document.querySelector('button')
         const div = document.querySelector('div')
 
-        document.addEventListener('touchstart', e => {
+        bas.addEventListener('touchstart', e => {
             console.log(e.touches);
             
             div.style.backgroundColor = 'blue'
         })
-        document.addEventListener('touchmove', e => {
+        bas.addEventListener('touchmove', e => {
             console.log('Move');
             div.style.backgroundColor = 'yellow'
         })
-        document.addEventListener('touchend', e => {
+        bas.addEventListener('touchend', e => {
             div.style.backgroundColor = 'red'
         })
     </script>
